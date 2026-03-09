@@ -43,9 +43,17 @@
                 <span asp-validation-for="Movie.Rank" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Upload New Image</label>
-                <input type="file" name="ImageFile" class="form-control" />
+                <label asp-for="Movie.ImageUri" class="control-label"></label>
+
+                <!-- MAKE SURE THIS DOESN'T SET asp-for="Movie.ImageUri" -->
+                <input type="file" name="not-movie-image-uri" class="form-control" />
+
+                <!-- ADD THIS TO FIX THE IMAGE GETTING SET TO NULL -->
+                <input type="hidden" asp-for="Movie.ImageUri" />
+
+                <span asp-validation-for="Movie.ImageUri" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
