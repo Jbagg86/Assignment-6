@@ -12,8 +12,8 @@ using RazorPagesMovie.Data;
 namespace RazorPagesMovie.Migrations
 {
     [DbContext(typeof(RazorPagesMovieContext))]
-    [Migration("20260323190922_CreateIdentitySchema")]
-    partial class CreateIdentitySchema
+    [Migration("20260325163736_Restart")]
+    partial class Restart
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
